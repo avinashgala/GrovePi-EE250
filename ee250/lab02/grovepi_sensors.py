@@ -29,10 +29,21 @@ is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will
 be true"""
 if __name__ == '__main__':
     PORT = 4    # D4
+    potentiometer = 0;
+    grovepi.pinMode(potentiometer,"INPUT")
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
-        time.sleep(0.2)
+        sensor_value = grovepi.analogRead(potentiometer)
+        ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
+        if ultrasonic_value <= sensor_value:
+        	setText(sensor_value + "  " + "OBJ PRES")
+       	else:
+       		setText(sensor_value)
+
+       	set_cursor(1, 0)
+       	write_text(ultrasonic_value)	
 
         print(grovepi.ultrasonicRead(PORT))
+        time.sleep(0.2)
