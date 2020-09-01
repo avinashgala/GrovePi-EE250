@@ -37,7 +37,7 @@ if __name__ == '__main__':
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
-        sensor_value = grovepi.analogRead(potentiometer)
+    	sensor_value = grovepi.analogRead(potentiometer)
         ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
 
         if ultrasonic_value <= sensor_value:
