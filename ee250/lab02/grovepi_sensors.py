@@ -49,7 +49,7 @@ if __name__ == '__main__':
         if ultrasonic_value <= sensor_value:
             setText(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            setText(sensor_value + "\n" + ultrastring)
+            setText(sensorstring + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
         
         time.sleep(0.2)
