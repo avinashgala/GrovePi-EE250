@@ -41,7 +41,7 @@ if __name__ == '__main__':
         ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
 
         if ultrasonic_value <= sensor_value:
-  			sensor_value = str(sensor_value)
+  		    sensor_value = str(sensor_value)
         	setText(sensor_value + "  " + "OBJ PRES")
        	else:
        		sensor_value = str(sensor_value)
@@ -53,3 +53,4 @@ if __name__ == '__main__':
 
         print(grovepi.ultrasonicRead(PORT))
         time.sleep(0.2)
+        #small test
