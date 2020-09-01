@@ -33,6 +33,7 @@ if __name__ == '__main__':
     potentiometer = 0;
     ultrasonic_ranger = 4
     grovepi.pinMode(potentiometer,"INPUT")
+    setRGB(0,128,64)
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
@@ -50,7 +51,7 @@ if __name__ == '__main__':
         #set_cursor(1, 0)
         #ultrasonic_value = str(ultrasonic_value)
         #write_text(ultrasonic_value)
-
+        print ("sensor_value = %d" % sensor_value)
         print(grovepi.ultrasonicRead(PORT))
         time.sleep(0.2)
         #small test
