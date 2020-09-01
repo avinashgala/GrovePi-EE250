@@ -30,6 +30,7 @@ be true"""
 if __name__ == '__main__':
     PORT = 4    # D4
     potentiometer = 0;
+    ultrasonic_ranger = 4
     grovepi.pinMode(potentiometer,"INPUT")
 
     while True:
