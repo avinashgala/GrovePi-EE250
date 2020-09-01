@@ -40,7 +40,7 @@ if __name__ == '__main__':
     	sensor_value = grovepi.analogRead(potentiometer)
     	ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
 
-        if ultrasonic_value <= sensor_value:
+    	if ultrasonic_value <= sensor_value:
   		    sensor_value = str(sensor_value)
         	setText(sensor_value + "  " + "OBJ PRES")
        	else:
