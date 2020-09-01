@@ -48,8 +48,8 @@ if __name__ == '__main__':
        		setText(sensor_value)
 
        	set_cursor(1, 0)
-        ultrasonic_value = str(ultrasonic_value)
-       	write_text(ultrasonic_value)	
+        #ultrasonic_value = str(ultrasonic_value)
+       	#write_text(ultrasonic_value)	
 
         print(grovepi.ultrasonicRead(PORT))
         time.sleep(0.2)
