@@ -40,19 +40,17 @@ if __name__ == '__main__':
         #sleep for a reasonable time of 200ms between each iteration.
         sensor_value = grovepi.analogRead(potentiometer)
         print ("sensor_value = %d" % sensor_value)
+        sensorstring = str(sensor_value)
+
         ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
+        print(grovepi.ultrasonicRead(PORT))
+        ultrastring = str(ultrasonic_value)
 
         if ultrasonic_value <= sensor_value:
-            sensor_value = str(sensor_value)
-            setText(sensor_value + "  " + "OBJ PRES")
+            setText(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            sensor_value = str(sensor_value)
-            setText(sensor_value)
-
-        locate(0, 1)
-        ultrasonic_value = str(ultrasonic_value)
-        write_text(ultrasonic_value)
+            setText(sensor_value + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
-        print(grovepi.ultrasonicRead(PORT))
+        
         time.sleep(0.2)
         #small test
