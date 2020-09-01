@@ -37,19 +37,19 @@ if __name__ == '__main__':
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
-    	sensor_value = grovepi.analogRead(potentiometer)
-    	ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
+        sensor_value = grovepi.analogRead(potentiometer)
+        ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
 
-    	if ultrasonic_value <= sensor_value:
-  		    sensor_value = str(sensor_value)
-  		    setText(sensor_value + "  " + "OBJ PRES")
+        if ultrasonic_value <= sensor_value:
+            sensor_value = str(sensor_value)
+            setText(sensor_value + "  " + "OBJ PRES")
         else:
-       		sensor_value = str(sensor_value)
-       		setText(sensor_value)
+            sensor_value = str(sensor_value)
+            setText(sensor_value)
 
-       	set_cursor(1, 0)
+        set_cursor(1, 0)
         ultrasonic_value = str(ultrasonic_value)
-       	write_text(ultrasonic_value)	
+        write_text(ultrasonic_value)
 
         print(grovepi.ultrasonicRead(PORT))
         time.sleep(0.2)
