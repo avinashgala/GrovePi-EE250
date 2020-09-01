@@ -43,7 +43,7 @@ if __name__ == '__main__':
     	if ultrasonic_value <= sensor_value:
   		    sensor_value = str(sensor_value)
   		    setText(sensor_value + "  " + "OBJ PRES")
-		else:
+        else:
        		sensor_value = str(sensor_value)
        		setText(sensor_value)
 
