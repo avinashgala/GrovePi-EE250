@@ -50,12 +50,9 @@ if __name__ == '__main__':
         if ultrasonic_value <= sensor_value:
             #this if else only exists so that the formatting looks good on the lcd when there is a 
             #four digit number for the potentiometer value, because it shifts everything over normally and looks ugly
-            if sensor_value >= 1000:
-                setText_norefresh(sensorstring + " " + "OBJ PRES" + "\n" + ultrastring)
-            else:   
-                setText_norefresh(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            setText_norefresh(sensorstring + "          " + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "           " + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
         
         time.sleep(0.2)
