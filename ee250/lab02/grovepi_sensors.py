@@ -39,18 +39,19 @@ if __name__ == '__main__':
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
         sensor_value = grovepi.analogRead(potentiometer)
-        print ("sensor_value = %d" % sensor_value)
+        #This was simply printed to the console for testing purposes
+        #print ("sensor_value = %d" % sensor_value)
         sensorstring = str(sensor_value)
 
         ultrasonic_value = grovepi.ultrasonicRead(ultrasonic_ranger)
-        print(grovepi.ultrasonicRead(PORT))
+        #print(grovepi.ultrasonicRead(PORT))
         ultrastring = str(ultrasonic_value)
 
         if ultrasonic_value <= sensor_value:
-            setText(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            setText(sensorstring + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
         
         time.sleep(0.2)
-        #small test
+    
