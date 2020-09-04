@@ -50,7 +50,7 @@ if __name__ == '__main__':
         if ultrasonic_value <= sensor_value:
             setText_norefresh(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            setText_norefresh(sensorstring + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "         " + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
         
         time.sleep(0.2)
