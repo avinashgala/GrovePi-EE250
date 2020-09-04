@@ -52,7 +52,7 @@ if __name__ == '__main__':
             #four digit number for the potentiometer value, because it shifts everything over normally and looks ugly
             setText_norefresh(sensorstring + "  " + "OBJ PRES" + "\n" + ultrastring)
         else:
-            setText_norefresh(sensorstring + "           " + "\n" + ultrastring)
+            setText_norefresh(sensorstring + "          " + "\n" + ultrastring)
         #print ("sensor_value = %d" % sensor_value)
         
         time.sleep(0.2)
